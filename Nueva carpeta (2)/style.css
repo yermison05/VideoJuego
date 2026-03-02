@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #111, #1f1f1f);
+  background-size: 400% 400%;
+  animation: fondoAnimado 12s ease infinite;
+  color: white;
+  text-align: center;
+}
+
+@keyframes fondoAnimado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero {
+  padding: 80px 20px;
+}
+
+.titulo-animado {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc,
+               0 0 20px #00ffcc,
+               0 0 40px #00ffcc;
+  animation: brillo 2s infinite alternate;
+}
+
+@keyframes brillo {
+  from { text-shadow: 0 0 10px #00ffcc; }
+  to { text-shadow: 0 0 25px #00ffcc, 0 0 50px #00ffcc; }
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+.galeria {
+  padding: 60px 20px;
+}
+
+.galeria h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.galeria-contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+
+.arma {
+  width: 240px;
+  padding: 15px;
+  animation: aparecer 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.arma:hover {
+  transform: scale(1.08);
+  transition: 0.3s ease;
+}
+
+.arma img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px #00ffcc);
+}
+
+.arma h3 {
+  margin-top: 10px;
+  color: #00ffcc;
+}
+
+.arma p {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-top: 5px;
+}
+
+.redes {
+  padding: 60px 20px;
+}
+
+.redes-contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.redes-contenedor img {
+  width: 50px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 8px #00ffcc);
+}
+
+.redes-contenedor img:hover {
+  transform: scale(1.3) rotate(8deg);
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #111;
+  font-size: 0.9rem;
+}
